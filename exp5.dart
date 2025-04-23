@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import './FirstPage.dart' as First;
-import './SecondPage.dart' as Second;
-import './ThirdPage.dart' as Third;
 
 void main() {
   runApp(MaterialApp(home: MyTabs()));
@@ -18,7 +15,10 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = TabController(vsync: this, length: 3);  // Initialize controller once
+    controller = TabController(
+      vsync: this,
+      length: 3,
+    ); // Initialize controller once
   }
 
   @override
@@ -55,19 +55,11 @@ class MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
       ),
       body: TabBarView(
         controller: controller,
-        children: <Widget>[
-          First.First(),
-          Second.Second(),
-          Third.Third(),
-        ],
+        children: <Widget>[First(), Second(), Third()],
       ),
     );
   }
 }
-
-
-//First Page Create a new file named FirstPage.dart
-import 'package:flutter/material.dart';
 
 class First extends StatelessWidget {
   @override
@@ -78,9 +70,6 @@ class First extends StatelessWidget {
   }
 }
 
-//Second Page
-import 'package:flutter/material.dart';
-
 class Second extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -90,9 +79,6 @@ class Second extends StatelessWidget {
   }
 }
 
-//Third Page
-import 'package:flutter/material.dart';
-
 class Third extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -101,4 +87,3 @@ class Third extends StatelessWidget {
     );
   }
 }
-

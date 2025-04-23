@@ -25,12 +25,7 @@ class PieChartSample extends StatelessWidget {
       color: Colors.orange,
       radius: 80,
     ),
-    PieChartSectionData(
-      title: 'HP',
-      value: 50,
-      color: Colors.red,
-      radius: 80,
-    ),
+    PieChartSectionData(title: 'HP', value: 50, color: Colors.red, radius: 80),
   ];
 
   @override

@@ -5,6 +5,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Text('Hello World'),
+      theme: ThemeData.light(),
     ),
   );
 }
